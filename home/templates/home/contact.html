@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+ <!-- Registration -->
+        <div id="registration" class="form-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="text-container">
+                            <h2>Just Fill Out The Form And We’ll Call You</h2>
+                            <hr class="hr-heading">
+                            <p>Mauris nec imperdiet sagittis, risus ligula posuere enim, ac eleife ligula ligula sit amet velit Morbi varius ante quis libero blandit auctor. Phasellus rhoncus varius nulla nec tristique mares</p>
+                            <ul class="list-unstyled li-space-lg">
+                                <li class="d-flex">
+                                    <i class="fas fa-square"></i>
+                                    <div class="flex-grow-1"><strong>Vi basi</strong> ligula sit amet velit Morbi varius ante quis dino</div>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fas fa-square"></i>
+                                    <div class="flex-grow-1"><strong>Phasellus</strong> rhoncus varius nulla nec tristique ro vones</div>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fas fa-square"></i>
+                                    <div class="flex-grow-1"><strong>Risus fo</strong> ligula posuere enim, ac eleife ligula nem malo</div>
+                                </li>
+                            </ul>
+                        </div> <!-- end of text-container -->
+                    </div> <!-- end of col -->
+                    <div class="col-lg-6">
+                        {%if messages %}
+                            {% for message in messages %}
+                               <div class="alert alert-{{message.tags}}">
+                                   {{message}}
+                               </div>
+ <!-- Registration Form --> {% endfor %}
+                        {% endif %}
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <div class="mb-4 form-floating">
+                                {{form.name}}
+                            </div>
+                            <div class="mb-4 form-floating">
+                                {{form.email}}
+                            </div>
+                            <div class="mb-4 form-floating">
+                                {{form.phone}}
+                            </div>
+                            <div class="mb-4 form-floating">
+                               {{form.message}}
+                            </div>
+
+
+                            <button type="submit" class="form-control-submit-button">Send</button>
+                        </form>
+                        <!-- end of registrations form -->
+
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of form-1 -->
+        <!-- end of registration -->
+{% endblock %}

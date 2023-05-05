@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+        <div id="registration" class="form-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="text-container">
+                            <h2>Just Fill Out The Form And We’ll Call You</h2>
+                            <hr class="hr-heading">
+                            <p>Mauris nec imperdiet sagittis, risus ligula posuere enim, ac eleife ligula ligula sit amet velit Morbi varius ante quis libero blandit auctor. Phasellus rhoncus varius nulla nec tristique mares</p>
+                            <ul class="list-unstyled li-space-lg">
+                                <li class="d-flex">
+                                    <i class="fas fa-square"></i>
+                                    <div class="flex-grow-1"><strong>Vi basi</strong> ligula sit amet velit Morbi varius ante quis dino</div>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fas fa-square"></i>
+                                    <div class="flex-grow-1"><strong>Phasellus</strong> rhoncus varius nulla nec tristique ro vones</div>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fas fa-square"></i>
+                                    <div class="flex-grow-1"><strong>Risus fo</strong> ligula posuere enim, ac eleife ligula nem malo</div>
+                                </li>
+                            </ul>
+                        </div> <!-- end of text-container -->
+                    </div> <!-- end of col -->
+<div class="col-lg-6">
+
+ <!-- Registration Form -->
+                        <form>
+
+                            <div class="mb-4 form-floating">
+                                <input type="email" class="form-control" id="floatingInput2" placeholder="name@example.com">
+                                <label for="floatingInput2">Email</label>
+                            </div>
+                            <div class="mb-4 form-floating">
+                                <input type="password" class="form-control" id="password" placeholder="Message">
+                                <label for="password">Password</label>
+                            </div>
+
+
+                            <button type="submit" class="form-control-submit-button">Login</button>
+                        </form>
+                        <!-- end of registrations form -->
+
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of form-1 -->
+        <!-- end of registration -->
+{% endblock %}
